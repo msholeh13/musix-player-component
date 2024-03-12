@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musix Player Component</title>
+
+    <!-- font source sans 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="playing-music">
+                <img src="assets/images/icon.png" alt="Icon" class="cover">
+                <div class="recent-music">
+                    <div class="band">
+                        <div class="name-and-album-band">
+                            <span class="band-name">Mesin Tempur</span>
+                            <img src="assets/images/little_dot.svg" alt="">
+                            <span class="album-name">Hip Hop Sux! (2021)</span>
+                        </div>
+                        <div class="title">Supir Angkot Goblog</div>
+                    </div>
+                    <div class="time">
+                        <input type="range" class="range" min="0" max="3000" value="0" onchange="seek()">
+                        <div class="timestamp">
+                            <div class="recent-time"><span class="current-time-mins">00</span>: <span
+                                    class="current-time-seconds">00</span></div>
+                            <div class="max-time"><span class="track-mins">00</span>: <span
+                                    class="track-seconds">00</span></div>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <img src="assets/images/favorite.svg" alt="Favorite" class="favorite width-tools">
+
+                        <div class="middle-tools">
+                            <img src="assets/images/shuffle.svg" alt="shuffle" class="shuffle width-tools">
+                            <img src="assets/images/back.svg" alt="Back" class="back width-tools" onclick="backSong()">
+
+                            <img src="assets/images/pause.svg" alt="Play" class="play width-tools"
+                                onclick="playAndPause()">
+
+                            <img src="assets/images/forward.svg" alt="Forward" class="forward width-tools"
+                                onclick="nextSong()">
+                            <img src="assets/images/loop.svg" alt="Loop" class="loop width-tools">
+
+                        </div>
+
+                        <div class="volume">
+                            <input type="range" name="volume" id="volumeMusic" min="0" max="10" value="8"
+                                onchange="volumeMusic()">
+                            <img src="assets/images/sound.svg" class="volume width-tools" alt="Sound">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist">
+                <p>PLAYLIST</p>
+                <div class="playlist-music">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
